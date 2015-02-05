@@ -49,7 +49,7 @@ class TransmitterServer:
 
 	def process(self,data):
 		spl = data.split()
-		if spl[0] == 'init_message' and len(spl) >=2:
+		if spl[0] == 'start_test' and len(spl) >=2:
 			self.foreign_test_port = int(spl[1])
 			self.endTest()
 		elif spl[0] == 'test_params' and len(spl) >=2:
