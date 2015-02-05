@@ -38,6 +38,7 @@ int main(int argc,char **argv)
 
 	// Check input
 	if(from_port == 0 || to_port == 0){
+		std::cerr << from_port << " " << to_port << std::endl;
 		std::cerr << "Invalid ports specified" << std::endl;
 		exit(0);
 	}

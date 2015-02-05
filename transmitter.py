@@ -68,6 +68,7 @@ class TransmitterServer:
 
 	def startTest(self):
 		if self.norm_wt == None:
+			print self.local_test_port,self.foreign_test_port
 			self.proc = subprocess.Popen(['./transmitter','-ip',self.to_ip,'-f',str(self.local_test_port),'-t',str(self.foreign_test_port),'-msg',self.msg])
 		else:
 			self.proc = subprocess.Popen(['python','normalized_transmitter.py','-ip',self.to_ip,'-lp',str(self.local_test_port),'-fp',str(self.foreign_test_port),'-msg',self.msg,'-t',str(self.norm_wt)])
